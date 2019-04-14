@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.mobiquityinc.packer.Case;
+import com.mobiquityinc.packer.Package;
 
 class ResultBoardTest {
 
@@ -36,7 +36,7 @@ class ResultBoardTest {
 	@Test
 	@DisplayName("valid, 4 different case result")
 	void test() {
-		List<Case> caseList = Arrays.asList(new Case(0.0, null, "1,4"), new Case(0.0, null, "-"), new Case(0.0, null, "2,3"), new Case(0.0, null, "6"));
+		List<Package> caseList = Arrays.asList(new Package(0.0, null, "1,4"), new Package(0.0, null, "-"), new Package(0.0, null, "2,3"), new Package(0.0, null, "6"));
 		String expected = "1,4\n-\n2,3\n6\n";
 		assertEquals(expected, resultBoard.showResults(caseList));
 	}

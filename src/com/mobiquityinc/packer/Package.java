@@ -2,12 +2,12 @@ package com.mobiquityinc.packer;
 
 import java.util.List;
 
-public class Case {
+public class Package {
 	double weightLimit;
-	List<Pack> packList;
+	List<Item> packList;
 	String result;
 
-	public Case(double weightLimit, List<Pack> packList) {
+	public Package(double weightLimit, List<Item> packList) {
 		super();
 		this.weightLimit = weightLimit;
 		this.packList = packList;
@@ -15,7 +15,7 @@ public class Case {
 	
 	
 
-	public Case(double weightLimit, List<Pack> packList, String result) {
+	public Package(double weightLimit, List<Item> packList, String result) {
 		super();
 		this.weightLimit = weightLimit;
 		this.packList = packList;
@@ -30,11 +30,11 @@ public class Case {
 		this.weightLimit = weightLimit;
 	}
 
-	public List<Pack> getPackList() {
+	public List<Item> getPackList() {
 		return packList;
 	}
 
-	public void setPackList(List<Pack> packList) {
+	public void setPackList(List<Item> packList) {
 		this.packList = packList;
 	}
 

@@ -13,16 +13,18 @@ import com.mobiquityinc.exc.APIException;
 
 public class FileRead {
 
+	/*
+	 * @return lines of list from given file
+	 * */
 	public List<String> readFile(String filePath) {
 		final List<String> lineList = new ArrayList<String>();
 		if (!(filePath == null || filePath.isEmpty())) {
 			if (isFileExist(filePath)) {
 				FileReader fileReader;
 				try {
-					InputStream inputStream       = new FileInputStream(filePath);
-					Reader      inputStreamReader = new InputStreamReader(inputStream, "windows-1252");
-					
-//					fileReader = new FileReader(filePath);
+					InputStream inputStream = new FileInputStream(filePath);
+					//prevent read some characted problem
+					Reader inputStreamReader = new InputStreamReader(inputStream, "windows-1252");
 					BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 					String line = null;
 					while ((line = bufferedReader.readLine()) != null) {
@@ -32,8 +34,7 @@ public class FileRead {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				
-			
+
 			} else {
 				throw new APIException("file is not exist");
 			}

@@ -1,11 +1,11 @@
 package com.mobiquityinc.packer;
 
-public class Pack {
+public class Item {
 	int index;
 	double weight;
 	double cost;
 	
-	public Pack(int index, double weight, double cost) {
+	public Item(int index, double weight, double cost) {
 		super();
 		this.index = index;
 		this.weight = weight;

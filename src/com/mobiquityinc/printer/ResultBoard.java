@@ -2,14 +2,14 @@ package com.mobiquityinc.printer;
 
 import java.util.List;
 
-import com.mobiquityinc.packer.Case;
+import com.mobiquityinc.packer.Package;
 
 public class ResultBoard {
 
-	public String showResults(List<Case> caseList) {
+	public String showResults(List<Package> packageList) {
 		StringBuffer result = new StringBuffer();
-		if (caseList != null && caseList.size() > 0) {
-			caseList.stream().forEach(case_ -> result.append(case_.getResult() + "\n"));
+		if (packageList != null && packageList.size() > 0) {
+			packageList.stream().forEach(package_ -> result.append(package_.getResult() + "\n"));
 		} else {
 			result.append("no valid result");
 		}
