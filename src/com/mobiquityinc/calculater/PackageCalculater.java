@@ -16,6 +16,7 @@ public class PackageCalculater {
 		for (Package cs : caseList) {
 			double weightLimit = cs.getWeightLimit();
 			List<Item> packList = cs.getPackList();
+			//this is a limitation from paper
 			if (packList.size() == 1) {
 				cs.setResult("-");
 			} else {
